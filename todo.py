@@ -35,8 +35,9 @@ def list():
 def add():
     with open("ToDoList.txt", 'a') as tasks:
         question = input("Enter a task to add: ")
-        tasks.write(question.lower().strip() + ":incomplete" '\n')
-        tasks.close()
+        if question:
+            tasks.write(question.lower().strip() + ":incomplete" '\n')
+            tasks.close()
 
 
 
